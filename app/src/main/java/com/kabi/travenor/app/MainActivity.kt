@@ -35,16 +35,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
-
-/**
- * // root of firestore can only contain collections
- * // collection contain docs
- * // docs < 1MB
- * // docs cannot contain another docs
- * // docs can points to sub collections
- *
- * // firestore.collection(...).document(...)
- * //      .collection(...).document(...)
- * //  .collection(...).document(...)...
- * */
