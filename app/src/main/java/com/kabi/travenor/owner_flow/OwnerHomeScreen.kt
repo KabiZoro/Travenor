@@ -2,16 +2,13 @@
 
 package com.kabi.travenor.owner_flow
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -21,11 +18,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.MicNone
-import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -34,7 +28,6 @@ import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
-import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
@@ -46,6 +39,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -63,7 +57,6 @@ import com.kabi.travenor.core.presentation.design_system.theme.SubTextColor
 import com.kabi.travenor.core.presentation.design_system.theme.TextColor
 import com.kabi.travenor.owner_flow.components.OwnerPlaceCard
 import com.kabi.travenor.user_flow.main_screen.models.Place
-import com.kabi.travenor.user_flow.main_screen.places
 
 @Composable
 fun OwnerHomeScreen(
@@ -114,7 +107,7 @@ fun OwnerHomeScreen(
             CenterAlignedTopAppBar(
                 title = {
                     Text(
-                        text = "Search",
+                        text = stringResource(R.string.search),
                         fontFamily = SfUiDisplay,
                         color = TextColor,
                         fontSize = 18.sp,
@@ -128,7 +121,7 @@ fun OwnerHomeScreen(
                         onClick = {}
                     ) {
                         Text(
-                            text = "Cancel",
+                            text = stringResource(R.string.cancel),
                             fontFamily = SfUiDisplay,
                             color = Color.Blue,
                             fontSize = 16.sp,
@@ -171,7 +164,7 @@ fun OwnerHomeScreen(
                 ),
                 placeholder = {
                     Text(
-                        text = "Search Places",
+                        text = stringResource(R.string.search_places),
                         fontFamily = SfUiDisplay,
                         color = SubTextColor,
                         fontSize = 16.sp,
@@ -229,7 +222,7 @@ fun OwnerHomeScreen(
             // search places
             Spacer(modifier = Modifier.height(30.dp))
             Text(
-                text = "Search Places",
+                text = stringResource(R.string.search_places),
                 fontFamily = SfUiDisplay,
                 color = TextColor,
                 fontSize = 20.sp,

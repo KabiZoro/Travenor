@@ -9,4 +9,23 @@
     <string name="otp_verification">OTP Verification</string>
     <string name="verification_code">Please check your email %1$s to see the verification code</string>
     <string name="resend_code_to">Resend code to</string>
+    <string name="new_request_from_user">New Request from User</string>
+    <string name="accepted_successfully">Accepted Successfully</string>
+    <string name="request_rejected">Request Rejected</string>
+    <string name="waiting_for_requests">Waiting for requests…</string>
+    <string name="Search">Search</string>
+    <string name="search">Search</string>
+    <string name="cancel">Cancel</string>
+    <string name="search_places">Search Places</string>
+    <string name="Details">Details</string>
+    <string name="details">Details</string>
+    <string name="about_destination">About Destination</string>
+    <string name="requesting">Requesting…</string>
+    <string name="Accepted">Accepted</string>
+    <string name="book_now">Book Now</string>
+    <string name="accepted">Accepted</string>
+    <string name="username">Username</string>
+    <string name="best_destination">Best Destination</string>
+    <string name="onboard_description">At Friends tours and travel, we customize reliable and trustworthy educational tours to destinations all over the world</string>
+    <string name="get_started">Get Started</string>
 </resources>

@@ -40,6 +40,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -53,7 +54,6 @@ import com.kabi.travenor.app.db.BookingViewModel
 import com.kabi.travenor.app.navigation.ResultStore
 import com.kabi.travenor.core.presentation.design_system.button.PrimaryButton
 import com.kabi.travenor.core.presentation.design_system.theme.ActionColor
-import com.kabi.travenor.core.presentation.design_system.theme.GrayColor
 import com.kabi.travenor.core.presentation.design_system.theme.Location_Pin
 import com.kabi.travenor.core.presentation.design_system.theme.SfUiDisplay
 import com.kabi.travenor.core.presentation.design_system.theme.StarColor
@@ -79,7 +79,7 @@ fun DetailScreen(
                     .padding(horizontal = 20.dp),
                 title = {
                     Text(
-                        text = "Details",
+                        text = stringResource(R.string.details),
                         color = Color.White,
                         fontFamily = SfUiDisplay,
                         fontSize = 18.sp,
@@ -270,7 +270,7 @@ fun DetailScreen(
                         Spacer(modifier = Modifier.height(24.dp))
                         // about
                         Text(
-                            text = "About Destination",
+                            text = stringResource(R.string.about_destination),
                             fontFamily = SfUiDisplay,
                             color = TextColor,
                             fontSize = 20.sp,
@@ -311,17 +311,12 @@ fun DetailScreen(
                                     place?.ownerId?.let { id ->
                                         viewModel.createBooking(id, place.name)
                                     }
-                                    /*val ownerId = place?.ownerId
-                                    viewModel.createBooking(
-                                        ownerId ?: "OWNER_1234",
-                                        place?.name ?: ""
-                                    )*/
                                 }
                             },
                             text = when (currentPlaceStatus) {
-                                "PENDING" -> "Requesting..."
-                                "ACCEPTED" -> "Accepted"
-                                else -> "Book Now"
+                                "PENDING" -> stringResource(R.string.requesting)
+                                "ACCEPTED" -> stringResource(R.string.accepted)
+                                else -> stringResource(R.string.book_now)
                             },
                             modifier = Modifier
                                 .fillMaxWidth()

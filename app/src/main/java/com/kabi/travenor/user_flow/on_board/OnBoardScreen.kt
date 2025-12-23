@@ -1,8 +1,6 @@
 package com.kabi.travenor.user_flow.on_board
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
@@ -23,7 +21,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -108,7 +105,7 @@ fun OnBoardScreen(
                         .height(12.dp)
                 )
                 Text(
-                    text = "At Friends tours and travel, we customize reliable and trustworthy educational tours to destinations all over the world",
+                    text = stringResource(R.string.onboard_description),
                     fontFamily = GillSansMt,
                     fontSize = 20.sp,
                     lineHeight = 28.sp,
@@ -123,7 +120,7 @@ fun OnBoardScreen(
             )
             PrimaryButton(
                 onClick = onNavigateToSignInScreen,
-                text = "Get Started",
+                text = stringResource(R.string.get_started),
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 20.dp)

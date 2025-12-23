@@ -1,7 +1,5 @@
 package com.kabi.travenor.user_flow.main_screen.models
 
-import com.kabi.travenor.R
-
 data class Place(
     val id: String = "",
     val guestId: String = "",

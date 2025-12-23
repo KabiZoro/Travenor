@@ -14,16 +14,11 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeContent
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
-import androidx.compose.material3.Card
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -43,6 +38,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -127,7 +123,7 @@ fun OwnerDetailScreen(
                 },
                 title = {
                     Text(
-                        text = "New Request from User",
+                        text = stringResource(R.string.new_request_from_user),
                         fontFamily = SfUiDisplay,
                         color = SubTextColor,
                         fontSize = 16.sp,
@@ -192,9 +188,6 @@ fun OwnerDetailScreen(
                     dismissOnClickOutside = true,
                     dismissOnBackPress = true
                 )
-                /*modifier = Modifier
-                    .size(width = 269.dp, height = 160.dp),
-                shape = RoundedCornerShape(16.dp)*/
             )
         }
 
@@ -214,7 +207,7 @@ fun OwnerDetailScreen(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text(
-                            text = "Accepted Successfully",
+                            text = stringResource(R.string.accepted_successfully),
                             fontFamily = SfUiDisplay,
                             color = SubTextColor,
                             fontSize = 16.sp,
@@ -243,7 +236,7 @@ fun OwnerDetailScreen(
 
                 false -> {
                     Text(
-                        text = "Request Rejected",
+                        text = stringResource(R.string.request_rejected),
                         fontFamily = SfUiDisplay,
                         color = SubTextColor,
                         fontSize = 16.sp,
@@ -253,7 +246,10 @@ fun OwnerDetailScreen(
                 }
 
                 null -> {
-                    Text("Waiting for requests...", color = SubTextColor)
+                    Text(
+                        text = stringResource(R.string.waiting_for_requests),
+                        color = SubTextColor
+                    )
                 }
 
             }
